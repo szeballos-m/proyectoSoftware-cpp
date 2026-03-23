@@ -1,9 +1,13 @@
 {
-  "name": "C++ Environment",
+  "name": "C++ Class Environment",
   "image": "mcr.microsoft.com/devcontainers/cpp:1-debian-11",
   "customizations": {
     "vscode": {
-      "extensions": ["ms-vscode.cpptools-extension-pack"]
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "formulahendry.code-runner"
+      ]
     }
   }
 }
