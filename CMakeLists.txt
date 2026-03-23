@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
-project(PruebaGithub)
+project(MiProyectoCPP)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(app_prueba main.cpp)
+# Cambia 'main.cpp' por el nombre de tu archivo principal
+add_executable(MiPrograma main.cpp)
