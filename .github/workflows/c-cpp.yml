@@ -1,0 +1,23 @@
+name: CMake Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # Corre en Ubuntu, que ya trae gcc, g++ y cmake preinstalados
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configure CMake
+      # Crea la carpeta de compilación y configura el proyecto
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      # Compila el código
+      run: cmake --build ${{github.workspace}}/build --config Release
